@@ -1,38 +1,42 @@
-# Short-Strangle-Backtest
+# Short Strangle Strategy Backtesting
 
 ## Project Overview
-This project involves developing a web scraping tool using Selenium and Beautiful Soup to collect tweets, followed by performing sentiment analysis on the gathered data. The primary goal is to extract, process, and analyze tweet sentiments to uncover trends in public opinion and identify key sentiment drivers.
+This project involves the development and implementation of a backtesting system for the short strangle options strategy. The strategy was tested by entering trades every day over a one-year period with a 50% stop loss on both legs. The primary goal was to evaluate the strategy's performance through key metrics and visualizations.
+
+![Eqc](https://github.com/HetKothari1/Short-Strangle-Backtest/assets/167286650/00006d59-f1ac-496a-bd17-6db93572223c)
 
 ## Data Sources
-Tweets scraped from Twitter using Selenium and Beautiful Soup.
-
-The data includes tweet text, user information, timestamps, and other relevant metadata.
+- Historical options data for one year.
+- Data includes option prices, strike prices, expiry dates, and other relevant information.
 
 ## Tools
-Selenium: Used for automated web scraping to collect tweets from Twitter.
-
-Beautiful Soup: Utilized for parsing and extracting tweet data from the HTML.
-
-Python: The main programming language used for data collection, processing, and analysis.
-
-Pandas: For data manipulation and cleaning.
+- **Python**: The main programming language used for developing the backtesting system.
+- **Pandas**: For data manipulation and analysis.
+- **NumPy**: For numerical calculations.
+- **Matplotlib/Seaborn**: For data visualization.
+- **Jupyter Notebook**: For developing and documenting the analysis process.
 
 ## Approach
-### Data Collection:
-Utilized Selenium to automate the web scraping of tweets based on specified hashtags or keywords.
-Employed Beautiful Soup to parse and extract relevant tweet data from the HTML content.
+1. **Data Preparation**:
+   - Collected and cleaned historical options data.
+   - Prepared the data for analysis by filtering and organizing it into a suitable format.
 
-### Data Processing:
-Cleaned and preprocessed the scraped tweet data using Pandas.
-Removed duplicates, handled missing values, and standardized the text data.
+2. **Strategy Implementation**:
+   - Implemented the short strangle strategy by simultaneously selling a call and put option closest to Rs. 50 at 09:20 a.m.
+   - Applied a 50% stop loss on both legs of the trade to manage risk.
+   - Exited the trades when stop loss was hit or at 03:20 p.m.
 
-### Sentiment Analysis:
-Applied sentiment analysis on cleaned data to classify tweets into positive, negative, and neutral sentiments.
-Calculated sentiment scores and aggregated results for deeper analysis.
+3. **Backtesting**:
+   - Developed a backtesting framework to simulate daily trades over the one-year period.
+   - Vectorized the whole process to increase speed and efficiency.
+   - Evaluated the strategy’s performance using various metrics such as total profit/loss, average daily return, maximum drawdown, and win rate.
+
+4. **Data Visualization**:
+   - Created visualizations to illustrate the performance of the strategy, including equity curves, drawdown charts, and distribution of daily returns.
+   - Analyzed the effectiveness of the stop loss mechanism and explored optimization opportunities.
 
 ## Results
-Successfully collected and processed a significant volume of tweets.
-
-Performed sentiment analysis to classify and score the sentiments of the tweets.
-
-Provided actionable insights into social media sentiment and its drivers, which can be utilized for market analysis, brand monitoring, and public relations strategies.
+- Successfully implemented and backtested the short strangle strategy for an entire year.
+- Achieved comprehensive performance analysis through key metrics and visualizations.
+- Identified the impact of the 50% stop loss on risk management and overall profitability.
+- Provided insights into potential strategy optimizations and highlighted conditions under which the strategy performed best.
