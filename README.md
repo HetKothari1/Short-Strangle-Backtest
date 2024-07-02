@@ -5,12 +5,16 @@ This project involves developing a web scraping tool using Selenium and Beautifu
 
 ## Data Sources
 Tweets scraped from Twitter using Selenium and Beautiful Soup.
+
 The data includes tweet text, user information, timestamps, and other relevant metadata.
 
 ## Tools
 Selenium: Used for automated web scraping to collect tweets from Twitter.
+
 Beautiful Soup: Utilized for parsing and extracting tweet data from the HTML.
+
 Python: The main programming language used for data collection, processing, and analysis.
+
 Pandas: For data manipulation and cleaning.
 
 ## Approach
@@ -28,5 +32,7 @@ Calculated sentiment scores and aggregated results for deeper analysis.
 
 ## Results
 Successfully collected and processed a significant volume of tweets.
+
 Performed sentiment analysis to classify and score the sentiments of the tweets.
+
 Provided actionable insights into social media sentiment and its drivers, which can be utilized for market analysis, brand monitoring, and public relations strategies.
